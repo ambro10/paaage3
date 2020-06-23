@@ -5,7 +5,7 @@
     }
 
     .banner {
-        padding: 100px 30px 150px;
+        padding: 100px 20px 150px;
         background: url(../bg2.jpg);
     }
 
@@ -39,15 +39,16 @@
     
 
 
-main {
+.home {
     height: 95%;
     width: 100vw;
     display: grid;
-    grid-template-columns:  auto auto ;
+    grid-template-columns:  100% ;
     grid-template-rows: auto;
     grid-template-areas: 
-        "  text  "
-        " photo  ";
+        " title  "
+        " border "
+        " text  ";
 }
 
 .main-description {
@@ -56,13 +57,13 @@ main {
     letter-spacing: 3px;
     color: white;
     text-align: center;
+    grid-area: text;
 
 
 }
 
-.drone-main img {
-    height: 75%;
-    width: 75%;
+.drone-main {
+    display: block;
 }
 
 .main-text {
