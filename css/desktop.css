@@ -85,6 +85,10 @@ header #toggle:after {
     z-index: 2;
 }
 
+.title2 {
+    color: #40c3ff;
+}
+
 .banner.active {
     transform: translateX(-400px);
 }
@@ -607,6 +611,7 @@ footer {
     height: 40px;
     background: black;
     margin: 10px;
+    border: 1px solid white;
     border-radius: 30%;
     box-shadow: 0 5px 15px -5px #00000070;
     color: white;
