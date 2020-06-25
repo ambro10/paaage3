@@ -27,10 +27,10 @@
                 <div class="content">
                     
                     <div class="content">
-                        <h2>Hello, <br>I'm <span>Sebastian Ambrochowicz</span></h2>
-                        <p> Junior frontend and Python developer, <br/> Licensed Drone Operator
+                        <h2 id="hello">Hello, <br>I'm <span>Sebastian Ambrochowicz</span></h2>
+                        <p id="whoami"> Junior frontend and Python developer, <br/> Licensed Drone Operator
                         </p>
-                        <a href="#">Know more</a>
+                        <a href="#" id="km">Know more</a>
                     </div>
                     <ul class="sci">
                         <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
@@ -41,44 +41,48 @@
                     </ul>
             </section>
             <div id="navigation">
+                <div class="langs">
+                    <a id="pl" onclick="changeLanguagePL()"><img src="icons/poland.jpg"></a>
+                    <a id="ang" onclick="changeLanguageENG()"><img src="icons/britain.png"></a>
+                </div>
                 <ul>
-                    <li class="main-link"><a href="#main">About</a></li>
-                    <li class="services-link"><a href="#services-section">Services</a></li>
-                    <li class="gallery-link"><a href="#gallery-section">Gallery</a></li>
-                    <li class="contact-link"><a href="#contact">Contact</a></li>
+                    <li class="main-link"><a href="#main" id="listA">About</a></li>
+                    <li class="services-link"><a href="#services-section" id="listS">Services</a></li>
+                    <li class="gallery-link"><a href="#gallery-section" id="listG">Gallery</a></li>
+                    <li class="contact-link"><a href="#contact" id="listC">Contact</a></li>
                 </ul>           
             </div>
     </header>
 </section>
-    <div class="home">
-    <h1>Nice to host you on my website!</h1>
+    <div class="home" id="home">
+    <h1 id="welcome-title">Nice to host you on my website!</h1>
     <div class="home-border"></div>
     <div class="main-description">
-            <h2>FEW WORDS ABOUT ME</h2>
-            <h5 class="">SO WHO AM I AND WHAT DO I DO?</h5>
+            <h2 id="htext1">FEW WORDS ABOUT ME</h2>
+            <h5 id="htext2">SO WHO AM I AND WHAT DO I DO?</h5>
             <p>|</p>
             <p>|</p>
             <p>|</p>
-            <p> My name is Sebastian Ambrochowicz. <br/>
+            <p id="htext3"> My name is Sebastian Ambrochowicz. <br/>
                 I have recently finished technical college and currently I will plan to study in this field. </br>
                 Designing websites and filming is my passion and way of life. <br/>
-                If you care about coherent and eye-catching projects, you've come to the right place! <br/> I invite you to cooperation,
+                If you care about coherent and eye-catching projects, you've come to the right place! <br/>
                 I will gladly prepare and send a quote.</p>
             
     </div>
     <div class="drone-main"><img src="icons\dron2.png"></div>
     </div>
-    <section class="services-section">
+    <section class="services-section" id="services">
         <div class="inner-width">
-            <h1 class="section-title">Services</h1>
+            <h1 class="section-title" id="serv-title">Services</h1>
             <div class="border"></div>
             <div class="services-container">
                 <div class="service-box">
                     <div class="service-icon">
                         <i class="fa fa-desktop"></i>
                     </div>
-                    <div class="service-title">Creating sites</div>
-                    <div class="service-desc">
+                    <div class="service-title" id="serv1">Creating sites</div>
+                    <div class="service-desc" id="serv1t">
                         The most I value transparency and functionality,
                          so every page I create is characterized by this. 
                          The main languages ​​I use are: HTML, CSS, Javascript and various useful libraries.
@@ -89,8 +93,8 @@
                     <div class="service-icon">
                         <i class="fas fa-code"></i>
                     </div>
-                    <div class="service-title">Webstite management</div>
-                    <div class="service-desc">
+                    <div class="service-title" id="serv2">Website management</div>
+                    <div class="service-desc" id="serv2t">
                         I will also be happy to undertake guidance or modification
                         site already created for customer needs.
                     </div>
@@ -100,9 +104,9 @@
                     <div class="service-icon">
                             <i class="fas fa-photo-video"></i>
                     </div>
-                    <div class="service-title">FILMING
+                    <div class="service-title" id="serv3">FILMING
                         AND DRONE SHOOTING</div>
-                    <div class="service-desc">
+                    <div class="service-desc" id="serv3t">
                         I have been a licensed operator of unmanned aerial ships since 2018,
                         both in sight and out of sight. I also have a check-in for
                         multirotors up to 25 kg in weight. The shots from my hand are professional,
@@ -115,13 +119,12 @@
                     <div class="service-icon">
                         <i class="fa fa-bar-chart"></i>
                     </div>
-                    <div class="service-title">Data Science</div>
-                    <div class="service-desc">
+                    <div class="service-title" id="serv4">Data Science</div>
+                    <div class="service-desc" id="serv4t">
                         This is a specialization that I decided to choose in college because
-                         of my interest in the language that is Python. I think that this is
-                         
-                         an extremely interesting field of computer science,
-                         which I would gladly choose in further development.
+                        of my interest in the language that is Python. I think that this is
+                        an extremely interesting field of computer science,
+                        which I would gladly choose in further development.
                     </div>
                 </div>    
             </div>
@@ -130,9 +133,9 @@
 
     
 
-    <div class="gallery-section">
+    <div class="gallery-section" id="gallery">
             <div class="inner-width">
-              <h1>Gallery</h1>
+              <h1 id="gtitle">Gallery</h1>
               <div class="border"></div>
               <div class="gallery">
       
@@ -170,14 +173,26 @@
                     <img src="gallery\asdasd.jpg" alt="">
                 </a>
               </div>
-              <div class="gallery-button">
-                <button>Pokaż więcej</button>
+              <div class="more-gallery" id="show">
+                <a href="gallery\wkd.jpg" class="section-image" data-lightbox="mygallery">
+                    <img src="gallery\wkd.jpg" alt="">
+                </a>
+                <a href="gallery\zachod2.jpg" class="section-image" data-lightbox="mygallery">
+                    <img src="gallery\zachod2.jpg" alt="">
+                </a>
+                <a href="gallery\wkd3.jpg" class="section-image" data-lightbox="mygallery">
+                    <img src="gallery\wkd3.jpg" alt="">
+                </a>
             </div>
+                <div class="gallery-button">
+                    <button id="button" onclick="showMore()">Show more</button>
+                </div>
+
             </div>
           </div>
     
-    <section class="gallery-mobile">
-            <h1 class="section-title">Gallery</h1>
+    <section class="gallery-mobile" id="gallerym">
+            <h1 class="section-title" id="gtitle">Gallery</h1>
             <div class="border"></div>
         <div class="photo-mobile">
             <a href="gallery/osiedle2.jpg" data-lightbox="mygallery"><img src="gallery/osiedle2.jpg"></a>
@@ -223,14 +238,13 @@
         </div>
 
     </section>
-    <div class="div-break"></div>
-    <section class="contact">
-            <div class="contact-header"><h1>CONTACT</h1></div>
+    <section class="contact" id="con">
+            <div class="contact-header" id="ctitle"><h1>CONTACT</h1></div>
         <div class="contact-text">
-            <p><h4>Chcesz skorzystać z moich usług?<br/>
-            Napisz do mnie!<br/>
-            Postaram się możliwie szybko odpowiedzieć!</p><br/>
-            <p>Kontakt telefoniczny możliwy w godzinach 16-22</p></h4>
+            <p><h4 id="ctext">Do you want to use my services? <br/>
+                Write to me! <br/>
+                I will try to answer as soon as possible! </p> <br/>
+                <p> Contact by phone possible between 16-22 </p> </h4>
             <ul class="contact-list">
                 <li><a href="tel:+48600393716" itemprop="telephone"><i class="fa fa-phone">&emsp; (+48) 600 393 716</i></a></li>
                 <li><a href="mailto:sebaambro00@gmail.com" itemprop="telephone"><i class="fa fa-envelope">&emsp; sebaambro00@gmail.com</i></a></li>
@@ -240,20 +254,20 @@
             </div>
         <div class="container">  
             <form id="contact" action="sending.php" method="post">
-              <h3>Contact form</h3>
-              <h4>Contact me and get a reply within 24 hours</h4>
+              <h3 id="ftitle">Contact form</h3>
+              <h4 id="ftext">Contact me and get a reply within 24 hours</h4>
               
               <fieldset>
-                <input placeholder="Twój adres e-mail" type="email" tabindex="2" name="email" required>
+                <input placeholder="Your address e-mail" type="email" tabindex="2" name="email" id="fma" required>
               </fieldset>
               <fieldset>
-                <input placeholder="Twój numer telefonu" type="tel" tabindex="3" name="phone" required>
+                <input placeholder="Your phone number" type="tel" tabindex="3" name="phone" id="fph" required>
               </fieldset>
               <fieldset>
-                <input placeholder="Tytuł wiadomości" type="text" tabindex="1" name="subject" required >
+                <input placeholder="Subject" type="text" tabindex="1" name="subject" id="fsub" required >
               </fieldset>
               <fieldset>
-                <textarea placeholder="Treść wiadomości" tabindex="5" name="comment" required></textarea>
+                <textarea placeholder="Message content" tabindex="5" name="comment" id="msgcontent" required></textarea>
               </fieldset>
               <fieldset>
                 <button name="submit" type="submit" id="contact-submit">Send</button>

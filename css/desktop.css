@@ -89,26 +89,40 @@ header #toggle:after {
     color: #40c3ff;
 }
 
-.banner.active {
+.banner.active , .home.active , .services-section.active , .gallery-section.active , .gallery-mobile.active , .contact.active {
     transform: translateX(-400px);
 }
 
 #navigation {
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     width: 400px;
     height: 100vh;
     background: #40c3ff;
-    z-index: -1;
+    z-index: -3;
     display: grid;
     place-items: center;
     transition: 0.5s;
     cursor: pointer;
+    grid-template-columns: auto;
+    grid-template-rows: 10% 90%;
+    grid-template-areas:
+        "langs"
+        "list"
 }
 
 #navigation.active {
     right: 0;
+    cursor: pointer;
+    z-index: 0;
+}
+
+.langs {
+    grid-area: langs;
+}
+.langs img {
+    padding: 10px;
     cursor: pointer;
 }
 
@@ -116,6 +130,7 @@ header #toggle:after {
     position: relative;
     display: flex;
     flex-direction: column;
+    grid-area: list;
 }
 
 #navigation ul li {
@@ -156,6 +171,7 @@ header #toggle:after {
     display: inline-block;
     margin-top: 20px;
     background: #fff;
+    color: black;
     padding: 10px 30px;
     text-decoration: none;
     font-size: 1.2em;
@@ -329,8 +345,9 @@ section.image-mobile{
 
 
 .services-section {
-    background-size: cover;
     padding: 60px 0;
+    width: 100%;
+    background: black;
 }
 
 .inner-width{
@@ -415,20 +432,21 @@ section.image-mobile{
 
 
 .drone-contact img {
-    height: 50%;
-    width: 50%;
+    height: 40%;
+    width: 40%;
 }
 
 
 section.contact {
-    padding: 50px 20px 50px 20px;
+    padding-top: 50px;
     display: grid;
     grid-template-columns: auto auto;
     grid-template-rows: auto;
     grid-template-areas:
-        "title title" 
+        "title title"
         "text form"
         "text form ";
+    background: black;
 
 } 
 .cont-border {
@@ -466,6 +484,7 @@ section.contact {
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
+    margin-top: 40px;
 }
 
 
@@ -483,7 +502,6 @@ section.contact {
 #contact {
 	background:#000000;
 	padding:35px;
-    margin:20px 0;
 
 }
 
@@ -702,10 +720,21 @@ footer {
   margin: 60px auto;
 }
 
-.gallery-section .gallery{
+.gallery-section .gallery , .more-gallery{
   display: flex;
   flex-wrap: wrap-reverse;
   justify-content: center;
+}
+
+.more-gallery {
+
+    display: none;
+    transition: 0.5s;
+}
+
+.more-gallery.active {
+    display: flex;
+    transition: 0.5s;
 }
 
 .gallery-button {
