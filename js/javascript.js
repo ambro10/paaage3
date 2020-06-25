@@ -50,7 +50,7 @@ function changeLanguagePL() {
     document.getElementById('fph').innerHTML = "Twój numer telefonu";
     document.getElementById('fsub').innerHTML = "Tytuł wiadomości";
     document.getElementById('msgcontent').innerHTML = "Treść wiadomości";
-    document.getElementById('contact-submit').innerHTML = "Wyślij";
+    document.getElementById('contact-submit').innerHTML = "Nie działa";
 }
 
 function changeLanguageENG() {
@@ -83,7 +83,7 @@ function changeLanguageENG() {
     document.getElementById('fph').innerHTML = "Your phone number";
     document.getElementById('fsub').innerHTML = "Subject";
     document.getElementById('msgcontent').innerHTML = "Message content";
-    document.getElementById('contact-submit').innerHTML = "Send";
+    document.getElementById('contact-submit').innerHTML = "Not working";
 
 
 

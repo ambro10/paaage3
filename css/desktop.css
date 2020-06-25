@@ -42,6 +42,7 @@ header #toggle {
     width: 30px;
     height: 30px;
     cursor: pointer;
+    margin-top: 5px;
 }
 header #toggle:before {
     content: '';
@@ -531,7 +532,7 @@ fieldset {
 #contact input[type="text"], #contact input[type="email"], #contact input[type="tel"], #contact input[type="url"], #contact textarea {
 	width:96%;
 	border:1px solid #CCC;
-	background:#FFF;
+	background:rgb(0, 0, 0);
 	margin:0 0 5px;
     padding:10px;
     font-size: 20px;
@@ -555,11 +556,12 @@ fieldset {
     width:96%;
     height: 50px;
     border:none;
-	background:white;
-	color:black;
+    background:#40c3ff;
+	color:rgb(255, 255, 255);
 	margin:0 0 5px;
 	padding:10px;
-	font-size:25px;
+    font-size:2em;
+    font-family: 'poppins';
 }
 
 #contact button[type="submit"]:hover {
@@ -729,11 +731,13 @@ footer {
 .more-gallery {
 
     display: none;
+    transform: translateY(-400px);
     transition: 0.5s;
 }
 
 .more-gallery.active {
     display: flex;
+    transform: translateY(0);
     transition: 0.5s;
 }
 
